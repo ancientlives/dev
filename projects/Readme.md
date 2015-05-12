@@ -1,6 +1,7 @@
 ### Readme - dev - projects
 
-Various souce code and test organised by project association or reference.
+Various souce code and tests organised by project association or reference.
 
 #### Contents
-* metrics dashboard
+* metrics
+  * dashboard
