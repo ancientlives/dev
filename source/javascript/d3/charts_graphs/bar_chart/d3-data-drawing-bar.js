@@ -1,5 +1,5 @@
 /**
- * building basic bar charts with d3
+ * building basic bar charts with d3 (4 examples)
  **/
 
 //sample D3 array
