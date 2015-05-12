@@ -3,5 +3,5 @@
 Various source code and tests primarily organised by predominant language.
 
 #### Contents
-* JavaScript
-  * D3
+* javascript
+  * d3
