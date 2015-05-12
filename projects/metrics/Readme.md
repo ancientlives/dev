@@ -1,6 +1,6 @@
 ### Readme - dev - projects - metrics
 
-various source code and tests for metrics related development.
+Various source code and tests for metrics related development.
 
 #### Contents
 * dashboard
