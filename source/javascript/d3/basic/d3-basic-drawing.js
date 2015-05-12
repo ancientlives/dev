@@ -63,7 +63,7 @@ rects.attr('x', function(d, i) {
 		
 		);
 
-//add some colour to the circles...
+//add some colour to the rectangles...
 rects.attr('fill', 'navy')
 		.attr('stroke', 'pink')
 		.attr('stroke-width', function (d) {
