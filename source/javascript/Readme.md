@@ -3,4 +3,4 @@
 Source code and test for JavaScript and related libraries.
 
 #### Contents
-* D3
+* d3
