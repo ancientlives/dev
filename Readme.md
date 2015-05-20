@@ -8,3 +8,4 @@ Welcome to the *dev* repository, a varied collection of test code and projects.
 * source
   * javascript
     * d3
+    * jquery
