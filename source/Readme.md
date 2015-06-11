@@ -6,3 +6,4 @@ Various source code and tests primarily organised by predominant language.
 * javascript
   * d3
   * jquery
+  * node
