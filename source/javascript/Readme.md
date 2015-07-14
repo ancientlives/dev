@@ -6,3 +6,4 @@ Source code and tests for JavaScript and related libraries.
 * d3
 * jquery
 * node
+* react
