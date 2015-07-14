@@ -4,4 +4,3 @@ A collection of to-do based apps that demonstrate development and usage of the [
 
 #### Contents
 * basic1
-* basic2
