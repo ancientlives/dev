@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React - To Do - Basic 1 - Default Sort</title>
+    <!-- required react files -->
+    <script src="build/react.js"></script>
+    <script src="build/JSXTransformer.js"></script>
+  </head>
+  <body>
+    <!--
+    defined components for basic to-do app
+    * FullTodoTable (app parent component)
+      * TodoTable
+        * TodoRow
+    -->
+    <script type="text/jsx">
+    //todo row
+    var TodoRow = React.createClass({
+        render: function() {
+            var category = this.props.todo.category;
+            var name = this.props.todo.name;
+            var priority = this.props.todo.priority;
+            return (
+                <tr>
+                  <td>{category}</td>
+                  <td>{name}</td>
+                  <td>{priority}</td>
+                </tr>
+            );
+        }
+    });
+    //todo table
+    var TodoTable = React.createClass({
+        render: function() {
+          var sortItems = this.props.tableitems;
+          //initial sort JSON objects by category before loop and render table...
+          sortItems.sort(function(a, b) {
+          var catA=a.category.toLowerCase(), catB=b.category.toLowerCase()
+            if (catA < catB) //sort string ascending
+              return -1
+            if (catA > catB)
+              return 1
+            return 0 //default return value (no sorting)
+          })
+            var rows = [];
+            sortItems.forEach(function(todo) {
+                rows.push(<TodoRow todo={todo} />);
+            });
+            return (
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Name</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>{rows}</tbody>
+                </table>
+            );
+        }
+    });
+    //full todo table
+    var FullTodoTable = React.createClass({
+        render: function() {
+            return (
+                <div>
+                    <TodoTable tableitems={this.props.todoitems} />
+                </div>
+            );
+        }
+    });
+
+
+    var TODOITEMS = [
+      {category: 'Personal', name: 'Finish reading book', completed: true, priority: 'Low'},
+      {category: 'Work', name: 'Finish programming notes', completed: true, priority: 'High'},
+      {category: 'Personal', name: 'Check Holiday quotes', completed: true, priority: 'High'},
+      {category: 'Work', name: 'Send email replies', completed: false, priority: 'High'},
+      {category: 'Work', name: 'Read through notes', completed: true, priority: 'Low'},
+      {category: 'Personal', name: 'Organise library', completed: true, priority: 'Low'}
+    ];
+
+    React.render(<FullTodoTable todoitems={TODOITEMS} />, document.body);
+
+    </script>
+
+      </script>
+
+	</body>
+</html>
